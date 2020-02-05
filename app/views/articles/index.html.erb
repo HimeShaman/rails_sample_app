@@ -2,9 +2,11 @@
 <p>Find me in app/views/article/index.html.erb</p>
 <ul>
 <%- @articles.each do |article|%>
+    <% if article.visible = true %>
 <p>
-<%= link_to "#{article.id} - #{article.title} - #{article.comments.count} comments", article %>
+<%= link_to "#{article.id} - #{article.title} - #{article.comments.count} comments - #{article.visible}", article %>
 </p>
 <%- end %>
+<%- end%>
 <li></li>
 </ul>

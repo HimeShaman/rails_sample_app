@@ -6,7 +6,8 @@ class Article < ActiveRecord::Base
     def as_json(options = {})
         {
             title: self.title,
-            id: self.id
+            id: self.id,
+            visible: self.visible
         }
     end
 end
